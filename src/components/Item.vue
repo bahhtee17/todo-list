@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <button class="delete">X</button>
+    <button @click="this.$store.commit('deleteItem')" class="delete">X</button>
     <h4>{{item}}</h4>
     <input class="checkbox" type="checkbox"/>
   </div>
@@ -8,7 +8,13 @@
 
 <script>
 export default {
-    props:['item']
+    props:['item'],
+
+    data(){
+      return{
+
+      }
+    }
 
 }
 </script>
