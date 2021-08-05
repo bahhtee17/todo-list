@@ -1,6 +1,6 @@
 <template>
   <div>
-      <Item v-for="item, id in items" :key="id" :item="item"/>
+      <Item v-for="item, index in items" :key="index" :item="item"/>
   </div>
 </template>
 
@@ -11,7 +11,15 @@ export default {
         Item
     },
 
-    props:['items']
+    computed: {
+        items(){
+            return this.$store.getters.getList
+        }
+    },
+
+
+
+    props:['item']
 
 }
 </script>

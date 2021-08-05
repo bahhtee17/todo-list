@@ -1,7 +1,7 @@
 <template>
    <div>
        <h1>Todo</h1>
-       <List :items="items"/>
+       <List/>
    </div>
 </template>
 
@@ -14,11 +14,7 @@ export default {
      List
   },
 
-  data(){
-    return{
-      items: this.$store.state.items
-    }
-  }
+
 
 }
 </script>
